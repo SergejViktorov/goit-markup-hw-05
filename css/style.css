@@ -140,6 +140,27 @@ header .contaner {
   margin-right: 10px;
   fill: currentColor;
 }
+.header-link {
+  position: relative;
+}
+.header-link::after {
+  bottom: -32px;
+  left: 0;
+  position: absolute;
+  content: " ";
+  width: 100%;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+.current.header-link::after,
+.header-link:focus,
+.header-link:hover::after {
+  opacity: 1;
+}
 
 /**hero**/
 
