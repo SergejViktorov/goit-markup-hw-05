@@ -546,10 +546,15 @@ address .item:not(:last-child) {
   position: relative;
   overflow: hidden;
 }
-.flex-item:hover .overlay {
+.flex-item:hover .flex-overlay {
   transform: translateY(0);
 }
-.master-foto.overlay {
+.flex-img {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.flex-overlay {
   left: 0;
   top: 0;
   position: absolute;
@@ -558,8 +563,11 @@ address .item:not(:last-child) {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
+  transition: transform var(--animation-duration) var(--animation-type);
 }
-.overlay.text {
+.flex-text {
+  display: block;
+  position: absolute;
   font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
@@ -567,7 +575,7 @@ address .item:not(:last-child) {
   line-height: 1.56px;
   letter-spacing: 0.03em;
 
-  color: #ffffff;
+  color: #850505;
 }
 
 .title-box {
@@ -577,6 +585,7 @@ address .item:not(:last-child) {
 }
 .flex-img {
   display: block;
+  position: relative;
 }
 .title-partfolio {
   margin-bottom: 4px;
