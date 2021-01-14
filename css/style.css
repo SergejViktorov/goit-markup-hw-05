@@ -59,6 +59,9 @@ address {
   font-style: normal;
   width: 231px;
 }
+img {
+  display: block;
+}
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -94,6 +97,9 @@ header .contaner {
 
 .nav-link {
   display: flex;
+  transition-property: color;
+  transition-duration: 2500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link .item:not(:last-child) {
   margin-right: 50px;
@@ -108,7 +114,6 @@ header .contaner {
 .nav-link :focus {
   color: var(--accent-color);
   outline: none;
-  transition: color var(--animation-duration) var(--animation-type);
 }
 .contakt {
   display: flex;
@@ -123,12 +128,14 @@ header .contaner {
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contakt-link:hover,
 .contakt-link:focus {
   color: var(--accent-color);
   outline: none;
-  transition: color var(--animation-duration) var(--animation-type);
 }
 .icon-mail {
   width: 16px;
@@ -147,6 +154,9 @@ header .contaner {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--primery-text-color);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-link::after {
   bottom: 0;
@@ -159,7 +169,9 @@ header .contaner {
   border-radius: 2px;
   background-color: var(--accent-color);
   opacity: 0;
-  transition: opacity var(--animation-duration) var(--animation-type);
+  transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .current.header-link::after,
 .header-link:focus::after,
@@ -283,6 +295,34 @@ header .contaner {
 .activity-list .item:not(:last-child) {
   margin-right: 30px;
 }
+.activity-list .item {
+  position: relative;
+}
+.image-overly {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overly-title {
+  position: absolute;
+  right: ;
+  justify-content: center;
+  top: 50%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
 .title {
   margin-bottom: 10px;
   font-weight: 700;
@@ -360,13 +400,15 @@ header .contaner {
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .master-link:focus,
 .master-link:hover {
   background-color: var(--accent-color);
   fill: var(--secondary-accent-color);
   outline: none;
-  transition: color var(--animation-duration) var(--animation-type);
 }
 .item-master {
   display: block;
@@ -400,16 +442,18 @@ header .contaner {
   color: var(--icon-color);
   border-radius: 4px;
   border: 1px solid var(--icon-color);
+  transition-property: color, border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:focus,
 .client-link:hover {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
   outline: none;
-  transition: color var(--animation-duration) var(--animation-type);
 }
 .client-icon {
-  fill: currentColor;
+  fill: currentcolor;
 }
 /*footer*/
 .footer {
@@ -465,12 +509,14 @@ header .contaner {
 
 .address-link {
   color: var(--footer-contacts);
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-link:hover,
 .address-link:focus {
   color: var(--accent-color);
   outline: none;
-  transition: color var(--animation-duration) var(--animation-type);
 }
 address .item:not(:last-child) {
   margin-bottom: 9px;
@@ -506,13 +552,15 @@ address .item:not(:last-child) {
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button:hover,
 .button:focus {
   color: var(--secondary-accent-color);
   background-color: var(--accent-color);
   outline: none;
-  transition: color var(--animation-duration) var(--animation-type);
 }
 /* таблица картинок портфолио*/
 .flex-container {
@@ -533,6 +581,9 @@ address .item:not(:last-child) {
   display: block;
   width: 370px;
   height: 404px;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .flex-item:focus,
 .flex-item:hover {
@@ -540,7 +591,6 @@ address .item:not(:last-child) {
     1px 4px 6px rgba(0, 0, 0, 0.16);
   display: block;
   outline: none;
-  transition: box-shadow var(--animation-duration) var(--animation-type);
 }
 .master-foto {
   position: relative;
@@ -555,6 +605,7 @@ address .item:not(:last-child) {
   top: 0;
 }
 .flex-overlay {
+  display: flex;
   left: 0;
   top: 0;
   position: absolute;
@@ -563,9 +614,13 @@ address .item:not(:last-child) {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition: transform var(--animation-duration) var(--animation-type);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .flex-text {
+  align-items: center;
+  justify-content: center;
   display: block;
   position: absolute;
   font-family: "Roboto";
@@ -574,8 +629,9 @@ address .item:not(:last-child) {
   font-size: 18px;
   line-height: 1.56px;
   letter-spacing: 0.03em;
-
-  color: #850505;
+  color: #fff;
+  padding: 63px 24px;
+  margin: 0;
 }
 
 .title-box {
@@ -602,4 +658,43 @@ address .item:not(:last-child) {
   line-height: 1.9;
 }
 
-/* афаф */
+/* modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.backdrop-button {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin-right: 8px;
+  margin-top: 8px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
