@@ -607,7 +607,6 @@ address .item:not(:last-child) {
   top: 0;
 }
 .flex-overlay {
-  display: flex;
   left: 0;
   top: 0;
   position: absolute;
@@ -616,26 +615,26 @@ address .item:not(:last-child) {
   background-color: rgba(33, 150, 243, 0.9);
 
   transform: translateY(100%);
-  transition-property: transform;
-  transition-duration: 250ms;
+  transition: 250ms ease;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .flex-text {
-  font-family: "Roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 1.56px;
-  letter-spacing: 0.03em;
+  line-height: 1.55;
   color: #fff;
   padding: 63px 24px;
-  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .title-box {
   display: block;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 .flex-img {
   display: block;
