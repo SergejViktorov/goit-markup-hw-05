@@ -597,6 +597,7 @@ address .item:not(:last-child) {
   position: relative;
   overflow: hidden;
 }
+.flex-item:focus .flex-overlay,
 .flex-item:hover .flex-overlay {
   transform: translateY(0);
 }
